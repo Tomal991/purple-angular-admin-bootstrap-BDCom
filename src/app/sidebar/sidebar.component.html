@@ -1,0 +1,20 @@
+<div class="sidebar-content">
+  <ul class="nav-list" >
+    <h1 class="title"><i class="fa-solid fa-layer-group"></i>Purple</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <img src="../../assets/images/faces/face1.jpg" alt="" />
+      <div>
+        <div class="name">Tomal</div>
+        <div class="designation">Project Manager</div>
+      </div>
+      <i class="fa-solid fa-bookmark icon"></i>
+    </div>
+
+    <li class="nav-list-item" *ngFor="let item of list; let i = index">
+      <i class="{{ item.icon }}"></i>
+      <span
+        ><a href="#">{{ item.name }}</a></span
+      >
+    </li>
+  </ul>
+</div>

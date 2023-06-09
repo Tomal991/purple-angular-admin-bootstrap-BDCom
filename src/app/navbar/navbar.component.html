@@ -1,0 +1,70 @@
+<nav class="navbar " [ngClass]="{'.app-navbar-shrink':sidebarStatus}">
+  <div action="" class="d-flex me-5">
+    <div class="sidebar-button p-2 me-3 text-light" (click)="sidebarToggle()">
+      <i class="fa-solid fa-bars"> </i>
+    </div>
+    <button type="submit" class="btn btn-outline-light">
+      <i class="fa-solid fa-search"></i>
+    </button>
+
+    <input
+      type="search"
+      placeholder="Search Projects"
+      class="form-control me-2 search"
+    />
+  </div>
+
+  <div class="d-flex gap-5 me-5">
+    <div class="dropdown">
+      <div
+        class="d-flex align-items-center dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+        <div>
+          <img
+            src="../../assets/images/favicon.png"
+            alt=""
+            class="profile-image me-3"
+          />
+        </div>
+        <div>Tomal</div>
+      </div>
+      <ul class="dropdown-menu dropdown-menu-light">
+        <li><a href="#" class="dropdown-item"> profile </a></li>
+        <li><a href="#" class="dropdown-item"> sign out</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <div class="d-flex align-items-center" data-bs-toggle="dropdown">
+        <div><i class="fa-solid fa-envelope"></i></div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="d-flex align-items-center" data-bs-toggle="dropdown">
+        <div>
+          <div><i class="fa-solid fa-bell"></i></div>
+        </div>
+      </div>
+      <ul class="dropdown-menu dropdown-menu-light">
+        <li><a href="#" class="dropdown-item"> profile </a></li>
+        <li><a href="#" class="dropdown-item"> sign out</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <div class="d-flex align-items-center" data-bs-toggle="dropdown">
+        <div><i class="fa-solid fa-power-off"></i></div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="d-flex align-items-center" data-bs-toggle="dropdown">
+        <div>
+          <i class="fa-solid fa-arrow-up-wide-short"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

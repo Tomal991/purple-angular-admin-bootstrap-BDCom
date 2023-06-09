@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "./assets/scss/variables";
+
+ul{
+  li{
+    list-style-type: none;
+  }
+}
+button{
+  border: none;
+}
+
+
+.dots {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 10px;
+  $colors: (
+    red: #f50b0b,
+    orange: #fe9a76,
+    yellow: #ffd700,
+    olive: #32cd32,
+    green: #016936,
+    teal: #008080,
+    blue: #77B3F1,
+    violet: #ee82ee,
+    purple: #BC72FF,
+    pink: #FF8C96,
+    brown: #a52a2a,
+    none: #a0a0a0,
+    dark: #000000,
+    darkgray: #8a7e7e,
+  );
+
+  $colorName: map-keys($colors);
+
+  @each $color in $colorName {
+    &.dots-color-#{"" + $color} {
+      background-color: map-get($colors, $color);
+    }
+  }
+}
+
+
+.badge {
+  border-radius: 3px;
+	padding: 0.3em 0.6em;
+	text-transform: capitalize;
+	font-size: 0.8rem;
+	font-weight: 600;
+	width: fit-content;
+	color: #fff;
+	font-family: monospace;
+	letter-spacing: 1px;
+	max-width: fit-content;
+	cursor: default;
+	margin-right: 3px;
+
+  $colors: (
+    red: #FF9996,
+    orange: #fe9a76,
+    yellow: #FFD606,
+    olive: #32cd32,
+    green: #016936,
+    teal: #12CEB1,
+    blue: #42A0EB,
+    violet: #ee82ee,
+    purple: #b413ec,
+    pink: #ff1493,
+    brown: #a52a2a,
+    none: #a0a0a0,
+    dark: #000000,
+    darkgray: #8a7e7e,
+   
+  );
+
+  $colorName: map-keys($colors);
+
+  @each $color in $colorName {
+    &.badge-color-#{"" + $color} {
+      background-color: map-get($colors, $color);
+    }
+  }
+}
